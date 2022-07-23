@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: whitesmoke;
+}
+#mars-rover {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+img {
+    width: 100%;
+    background-size: cover;
+}
+.container {
+    width: 20%;
+    display: flex;
+    margin: 2%;
+    background-color: rgba(128, 128, 128, 0.508);
+    box-shadow: 5px 5px gray;
+}
