@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: lightcyan;
+}
+#APOD {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    border: 2px solid black;
+    padding-block: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 5px black;
+    background-color: skyblue;
+}
+#title {
+    font-size: 3em;
+    text-align: center;
+}
+#title-of-the-day {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 10px;
+}
+#image-of-the-day {
+    width: 75%;
+    background-size: cover;
+    /* Centering the image */
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+#date {
+    text-align: center;
+    opacity: 0.5;
+    margin-top: 5px;
+}
+#description {
+    text-align: justify;
+    width: 75%;
+    margin: 20px auto;
+    font-family: sans-serif;
+    font-size: 1.25em;
+}
+#download-button {
+    display: block;
+    padding: 10px;
+    font-size: 1.125em;
+    margin: auto;
+}
