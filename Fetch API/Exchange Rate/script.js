@@ -1,4 +1,4 @@
-import { config } from "./configure.js";
+import { config } from "./config.js";
 
 const mainDiv = document.querySelector("section");
 const currencyOne = document.querySelector("#first-currency");
