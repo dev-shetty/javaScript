@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#title {
+    text-align: center;
+    margin-top: 10px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 1.5em;
+}
+section input[type=text] {
+    width: 200px;
+    margin-bottom: 20px;
+    font-size: inherit;
+}
+::placeholder {
+    text-align: center;
+}
+#submit {
+    width: 50%;
+    align-self: center;
+    font-size: 0.75em;
+}
