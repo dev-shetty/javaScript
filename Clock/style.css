@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Seven Segment', sans-serif;
+    /* overflow: hidden; */
+}
+body {
+    background: linear-gradient(45deg, gray, blanchedalmond, blanchedalmond, gray );
+}
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main p {
+    font-size: 8em;
+    display: flex;
+    justify-content: center;
+    min-width: 200px;
+}
+main:first-child p {
+    font-size: 12em;
+    min-width: 300px;
+}
+b {
+    font-size: 8em;
+    margin-bottom: 2%;
+}
+.calender {
+    margin-top: 50px;
+}
+.month {
+    margin-right: 40px;
+}
+
