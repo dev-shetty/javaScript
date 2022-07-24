@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exchange Rate</title>
+</head>
+<body>
+    <main>
+        <h1 class="title">Check the exchange rate of your currency</h1>
+        <section>
+            <label for="first-currency">Select Base Currency</label>
+            <select name="currency" id="first-currency">
+                <option value="AUD">Australian Dollar (AUD)</option>
+                <option value="CAD">Canadian Dollar (CAD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="INR">Indian Rupee (INR)</option>
+                <option value="JPY">Japanese Yen (JPY)</option>
+                <option value="KWD">Kuwaiti Dinar (KWD)</option>
+                <option value="GBP">Pound Sterling (GBP)</option>
+                <option value="AED">UAE Dirham (AED)</option>
+                <option value="USD" selected>United States Dollar (USD)</option>
+            </select>
+
+            <label for="second-currency">Select Currency</label>
+            <select name="currency" id="second-currency">
+                <option value="AUD">Australian Dollar (AUD)</option>
+                <option value="CAD">Canadian Dollar (CAD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="INR" selected>Indian Rupee (INR)</option>
+                <option value="JPY">Japanese Yen (JPY)</option>
+                <option value="KWD">Kuwaiti Dinar (KWD)</option>
+                <option value="GBP">Pound Sterling (GBP)</option>
+                <option value="AED">UAE Dirham (AED)</option>
+                <option value="USD">United States Dollar (USD)</option>
+            </select>
+            <button id="calculate">Calculate</button>
+            <div class="result">
+                <h2 class="conversion-result"></h2>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
