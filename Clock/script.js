@@ -27,7 +27,7 @@ setInterval(time => {
         am_pm = "PM"
     }
     if(hour == 0) {
-        hr = 12;
+        hour = 12;
         am_pm = "AM"
     }
 
