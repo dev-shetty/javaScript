@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: lightseagreen;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    flex-wrap: wrap;
+}
+h1 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+    color: blanchedalmond;
+}
+button {
+    position: relative;
+    margin: 2%;
+    padding: 20px;
+    font-size: 1em;
+    font-weight: 700;
+    z-index: 1;
+    width: 200px;
+    background-color: blanchedalmond;
+    border: none;
+    box-shadow: 8px 8px rgba(128, 128, 128, 0.456);
+
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    background-color: cornflowerblue;
+    inset: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+.slide-left::before {
+    transform-origin: left;
+}
+.slide-right::before {
+    transform-origin: right;
+}
+
+.slide-top::before,
+.slide-bottom::before {
+    transform: scaleY(0);
+    transition: transform 300ms ease-in-out;
+}
+.slide-top::before {
+    transform-origin: top;
+}
+.slide-bottom::before {
+    transform-origin: bottom;
+}
+.slide-top:hover,
+.slide-top:focus {
+    transform: scaleY(1);
+}
+
+.slide:hover::before,
+.slide:focus::before {
+    transform: scaleX(1);
+}
+
+.border-pop::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid blanchedalmond;
+    z-index: -1;
+    transition: inset 200ms ease-in-out;
+}
+.border-pop:hover::before,
+.border-pop:focus::before {
+    inset: -10px;   
+}
+
+.click {
+    transition: transform, box-shadow 300ms ease-in-out;
+}
+.click:hover,
+.click:focus {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px gray;
+}
