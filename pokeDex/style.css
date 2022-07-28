@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+main .display-container {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 20% 60% 1fr;
+}
+main .info-container {
+  position: relative;
+  width: 100%;
+  height: 72vh;
+  align-self: flex-end;
+  display: grid;
+  grid-template-rows: 30% 30% 1fr;
+  background-color: red;
+}
+main .clamp {
+  height: 72vh;
+  align-self: flex-end;
+  width: 10%;
+}
+
+.head {
+  display: flex;
+  position: relative;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+.head .lens {
+  margin-block: auto;
+  position: relative;
+  height: 75%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 5px solid whitesmoke;
+  background-color: rgba(0, 0, 255, 0.596);
+}
+.head .lens::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  aspect-ratio: 1;
+  border-radius: inherit;
+  top: 20%;
+  left: 10%;
+  background-color: lightblue;
+}
+.head .lights {
+  width: 10px;
+  aspect-ratio: 1;
+  align-self: flex-start;
+  position: relative;
+  top: 10%;
+  margin-left: 5%;
+  border-radius: 50%;
+}
+.head :nth-child(2) {
+  background-color: red;
+}
+.head :nth-child(3) {
+  background-color: yellow;
+}
+.head :nth-child(4) {
+  background-color: green;
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  left: 30%;
+  background-color: red;
+  -webkit-clip-path: polygon(33% 45%, 100% 44%, 100% 100%, 0 100%);
+          clip-path: polygon(33% 45%, 100% 44%, 100% 100%, 0 100%);
+}
+
+.middle {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.middle .outer-screen {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  background-color: #dfdfdf;
+}
+.middle .screen {
+  margin: auto;
+  width: 80%;
+  height: 70%;
+}
+.middle .screen img {
+  display: block;
+  background-repeat: none;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 20% 1fr 1fr;
+  background-color: red;
+}
+.bottom .circle-button {
+  background-color: rgba(0, 0, 0, 0.786);
+  height: 50%;
+  aspect-ratio: 1;
+  margin: 10%;
+  border-radius: 50%;
+}
+.bottom .small-screen {
+  background-color: lightgreen;
+  width: 80%;
+  margin: auto;
+  height: 50%;
+  font-size: 1.25em;
+  text-align: center;
+  padding-top: 15px;
+  text-transform: capitalize;
+}
+.bottom .plus-button {
+  position: relative;
+}
+
+.plus-button::before,
+.plus-button::after {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 20%;
+  background-color: #131313;
+}
+
+.plus-button::before {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+}
+
+.plus-button::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  top: 50%;
+  left: 50%;
+}
+
+.clamp {
+  background-color: red;
+  position: relative;
+  outline: 2px solid black;
+}
+
+.clamp::before,
+.clamp::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: 20%;
+}
+
+.clamp::before {
+  background-color: rgba(255, 255, 255, 0.6);
+  left: 10%;
+}
+
+.clamp::after {
+  background-color: brown;
+  right: 10%;
+  width: 40%;
+}
+
+.info-container::before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 60%;
+  background-color: white;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 32%, 39% 32%);
+          clip-path: polygon(0 0, 100% 0, 100% 32%, 39% 32%);
+  right: -1%;
+  top: -2%;
+}
+
+.info-container .pokemon-name {
+  width: 80%;
+  height: 10%;
+  position: absolute;
+  top: 20%;
+  margin-left: 10%;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 1%;
+}
+.info-container .pokemon-info {
+  width: 80%;
+  height: 50%;
+  position: absolute;
+  background-color: lightseagreen;
+  top: 60%;
+  transform: translateY(-50%);
+  margin: 10%;
+  font-size: 2em;
+  color: white;
+  padding: 5px 10px;
+  text-transform: capitalize;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  row-gap: 10%;
+  -moz-column-gap: 2%;
+       column-gap: 2%;
+}/*# sourceMappingURL=style.css.map */
