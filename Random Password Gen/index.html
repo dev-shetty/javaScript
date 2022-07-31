@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="display">Generate Random Password</div>
+        <div class="utility-buttons">
+            <button id="copy">Copy</button>
+            <button id="save">  Save</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="features">
+            <div>
+                <label for="length" >Choose the length</label>
+                <div>
+                    <input type="range" name="length" id="length" min="6" max="24" onchange="lengthValue()" value="8">
+                    <span class="length-value">8</span>
+                </div>
+            </div>
+            <div>
+                <input type="checkbox" name="special-characters" id="special-characters">
+                <label for="special-characters">Include Special Characters</label>
+            </div>
+            <div>
+                <input type="checkbox" name="numbers" id="numbers">
+                <label for="numbers" defaultChecked = true>Include numbers</label>
+            </div>
+            <div>
+                <input type="checkbox" name="capital-letters" id="capital-letters">
+                <label for="capital-letters">Include Capital Letters</label>
+            </div>
+        </div>
+        <button id="generate">Generate</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    min-height: 100vh;
+    background-color: lightseagreen;
+}
+.container {
+    margin: auto;
+    width: 500px;
+    height: 600px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.683);
+}
+.display {
+    width: 90%;
+    min-height: 100px;
+    margin: 5% auto;
+    background-color: lightgrey;
+    font-size: 1.875em;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.5em;
+}
+.features > div:not(:first-child) {
+    margin-top: 5%;
+    padding-left: 10%;
+}
+.features > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.features > div:first-child > div {
+    margin-top: 8%;
+}
+.length-value {
+    font-size: 1em;
+    margin-left: 5%;
+}
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right: 5px;
+}
+
+button {
+    position: relative;
+    align-self: center;
+    font-size: 1.5em;
+    padding: 5px 20px;
+    border-radius: 100vw;
+    border: none;
+    background-color:lightseagreen;
+    color: white;
+    box-shadow: 5px 5px 5px gray;
+    transition: box-shadow, transform 200ms ease-in-out;
+}
+#generate {
+    margin: 10%;
+    padding-block: 10px;
+}
+/* Doesnt work in submit button so used normal button */
+button::before {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    inset: 0;
+    /* background-color: crimson; */
+    border: 2px solid lightseagreen;
+    transition: inset 200ms ease-in-out;
+}
+button:hover::before {
+    inset: -8px;
+}
+button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+.utility-buttons {
+    align-self: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}
