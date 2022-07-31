@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #191919;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+header h1{
+  color: yellow;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 2%;
+}
+header p {
+  color: yellow;
+  font-size: 2em;
+  text-align: center;
+  margin-block: 2%;
+}
+
+footer {
+  height: 75px;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  color: white;
+}
+footer h3 {
+  font-size: 1.5em;
+}
+footer p {
+  font-size: 1.125em;
+  margin-left: auto;
+  margin-right: 5%;
+}

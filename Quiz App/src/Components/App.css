@@ -1,0 +1,28 @@
+.container {
+  color: #f3f3f3;
+  width: 750px;
+  height: 500px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} 
+.question {
+  grid-column: 1 / span 2;
+  border: 2px solid cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+  height: 80%;
+
+}
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid indigo;
+  width: 75%;
+  height: 80%;
+  margin: auto;
+}
