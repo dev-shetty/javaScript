@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+}
+
+.board {
+    margin: auto;
+    width: 600px;
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.board > div {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+.board > div:nth-child(3n) {
+    border-right: none;
+}
+.board > div:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.board > div {
+    color: orange;
+    font-size: 10rem;
+    text-align: center;
+    font-weight: 700;
+}
