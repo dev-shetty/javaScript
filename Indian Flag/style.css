@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --saffron: #FF9933;
+    --white: #FFFFFF;
+    --green: #138808;
+    --navy-blue: #000080;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.flag {
+    width: 450px;
+    height: 300px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+.saffron, .white, .green {
+    height: 100px;
+}
+.saffron {
+    background-color: var(--saffron);
+}
+.white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+}
+.green {
+    background-color: var(--green);
+}
+.ashoka-chakra {
+    border: 5px solid var(--navy-blue);
+    width: 90px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spokes {
+    position: absolute;
+    width: 88px;
+    height: 2px;
+    background-color: var(--navy-blue);
+}
+.spokes::before,
+.spokes::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--navy-blue);
+    border-radius: 50%;
+}
+.spokes::before {
+    top: 4px;
+    left: 1px;
+}
+.spokes::after {
+    right: 1px;
+    bottom: 4px;
+}
+.spokes:nth-child(1) {
+    transform: rotate(15deg);
+}
+.spokes:nth-child(2) {
+    transform: rotate(30deg);
+}
+.spokes:nth-child(3) {
+    transform: rotate(45deg);
+}
+.spokes:nth-child(4) {
+    transform: rotate(60deg);
+}
+.spokes:nth-child(5) {
+    transform: rotate(75deg);
+}
+.spokes:nth-child(6) {
+    transform: rotate(90deg);
+}
+.spokes:nth-child(7) {
+    transform: rotate(105deg)
+}
+.spokes:nth-child(8) {
+    transform: rotate(120deg)
+}
+.spokes:nth-child(9) {
+    transform: rotate(135deg)
+}
+.spokes:nth-child(10) {
+    transform: rotate(150deg)
+}
+.spokes:nth-child(11) {
+    transform: rotate(165deg)
+}
+.spokes:nth-child(12) {
+    transform: rotate(180deg)
+}
+
+.wish {
+    margin-top: 5%;
+    font-size: 3em;
+}
