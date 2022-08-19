@@ -1,0 +1,161 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root {
+    --navbar-color: #101010;
+    --bg-color: #151515;
+    --text-color: #EEEEEE;
+    --pop-color: #32CD32;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+nav {
+    background-color: var(--navbar-color);
+}
+nav > ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    gap: 2%;
+    padding-left: 2%;
+    font-size: 1.25em;
+    padding: 1%;
+}
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+ul > li:nth-last-child(2){
+    margin-left: auto;
+}
+ul > li:last-child {
+    margin-right: 2%;
+}
+ul > li:last-child > a {
+    color: var(--pop-color);
+}
+ul > li:last-child:hover {
+    color: white;
+}
+ul > li > a:hover {
+    color: var(--pop-color);
+}
+#search {
+    font-size: 1.125em;
+}
+main {
+    margin-top: 2%;
+    width: 80%;
+    margin-inline: auto;
+}
+header {
+    display: flex;
+    flex-direction: column;
+}
+header > div > h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+header > p {
+    font-size: 1.125em;
+    width: 80%;
+    line-height: 1.25;
+    text-align: justify;
+    margin: 1% auto;
+}
+header > div {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+header > div > img {
+    width: 25%;
+}
+ul > li > img {
+    width: 60px;
+}
+.container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 2%;
+    margin-block: 2%;
+}
+.container > .card {
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    min-height: 25vh;
+}
+.card > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.125em;
+    margin: auto;
+}
+.card:nth-child(3) > div {
+    flex-direction: row;
+    width: 50%;
+    flex-wrap: wrap;
+}
+.card:nth-child(3) > div p{
+    width: 50%;
+}
+.card > div p:hover {
+    color: var(--pop-color)
+}
+.reference-section {
+    border: 2px solid;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.125em;
+    margin-top: 1%;
+}
+.reference-section > p {
+    padding: 2%;
+}
+.reference-section > p:hover {
+    background-color: var(--pop-color);
+    color: var(--bg-color)
+}
+
+.study-abroad {
+    display: flex;
+    justify-content: center;
+} 
+.study-abroad > button {
+    padding: 1% 2%;
+    font-size: 1.25em;
+    border-radius: 100vw;
+    border: none;
+    background-color: var(--pop-color);
+    color: #131313;
+}
+.study-abroad > button:hover {
+    color: var(--text-color)
+}
+footer {
+    background-color: var(--navbar-color);
+    margin-top: 2%;
+    padding-block: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+footer > p > a {
+    text-decoration: none;
+    color: var(--pop-color);
+}
+footer > p > a:hover {
+    color: var(--text-color)
+}
