@@ -1,0 +1,15 @@
+:root {
+  --bg-color: #131313;
+  --text-color: #FFF;
+  --navbar-color: #090909;
+  --pop-color: #ff4500;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 15% 1fr;
+}

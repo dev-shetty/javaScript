@@ -1,0 +1,24 @@
+aside {
+    padding-top: 2%;
+    background-color: var(--navbar-color);
+    min-height: 92vh;
+    font-size: 1.25em;
+}
+aside > ul > li:first-child {
+    color: var(--text-color);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+aside > ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+aside > ul > li {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+aside > ul > li > a {
+    color: var(--text-color);
+}   

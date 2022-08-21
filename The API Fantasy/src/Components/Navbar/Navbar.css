@@ -1,0 +1,30 @@
+nav {
+    grid-column: 1 / span 2;
+    width: 100%;
+    background-color: var(--navbar-color);
+}
+nav > ul {
+    display: flex;
+    gap: 2rem
+}
+nav > ul > li {
+    font-size: 1.25em;
+    padding: 1rem;
+}
+nav > ul > li > a {
+    color: var(--text-color);
+}
+
+nav > ul > li:hover > a,
+aside > ul > li:hover > a {
+    color: var(--pop-color);
+}
+
+.logo {
+    background-color: gray;
+    width: 2em;
+    height: 2em;
+    align-self: center;
+    border-radius: 100%;
+    margin-left: 2%;
+}

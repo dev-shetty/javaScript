@@ -1,0 +1,36 @@
+.joke {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: var(--text-color);
+    width: 75%;
+    height: 50%;
+    flex-direction: column;
+}
+.joke-delivery {
+    margin-top: 5%;
+    text-align: center;
+}
+.joke-setup::before {
+    content: "🃏";
+}
+main#jokes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#random {
+    all: unset;
+    margin-top: 5%;
+    background-color: var(--pop-color);
+    padding: 1% 2%;
+    border-radius: 100vw;
+    font-size: 1.25em;
+    color: var(--text-color);
+}
+#random:hover {
+    color: var(--pop-color);
+    background-color: var(--text-color);
+}
