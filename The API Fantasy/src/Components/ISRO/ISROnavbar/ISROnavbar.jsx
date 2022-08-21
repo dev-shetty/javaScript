@@ -6,13 +6,14 @@ function ISROnavbar() {
     <nav id="isro-nav">
       <ul>
         <li>
-          <a href="#">Centres</a>
+          <Link to="/centres">Centres</Link>
         </li>
         <li>
           <a href="#">Launchers</a>
         </li>
         <li>
-          <a href="#">Spacecrafts</a>
+          <Link to="isro/spacecrafts">Spacecrafts</Link>
+          {/* It showed no routes matched then just removed "/" from /isro/spacecrafts */}
         </li>
       </ul>
     </nav>

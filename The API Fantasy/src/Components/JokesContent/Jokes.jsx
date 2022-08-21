@@ -14,7 +14,6 @@ function Jokes() {
     fetch(url)
       .then((response) => response.json())
       .then((jokes) => {
-        console.log(jokes);
         let { delivery, setup } = jokes;
 
         if (delivery == null) {
@@ -38,9 +37,7 @@ function Jokes() {
     }, 500);
   }
 
-  useEffect(() => {
-    getJokes();
-  }, []);
+  getJokes();
 
   return (
     <main id="main-parent">

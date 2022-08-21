@@ -9,20 +9,15 @@ function FunFacts() {
     fetch("https://asli-fun-fact-api.herokuapp.com/", options)
       .then((response) => response.json())
       .then((funFact) => {
-        console.log(funFact.data.fact);
-
         const {
           data: { fact },
         } = funFact;
 
         funFactEle.current.textContent = fact;
-        console.log(fact);
       })
       .catch((error) => console.error(error));
   }
-  useEffect(() => {
-    getFunFacts();
-  }, []);
+  getFunFacts();
 
   function randomFunFact() {
     funFactEle.current.textContent = "...";
