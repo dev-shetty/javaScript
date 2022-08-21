@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links > ul {
+    display: flex;
+    list-style: none;
+}
+.navbar-links li > a {
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: limegreen;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2em;
+    height: 1.75em;
+}
+.toggle-btn > .bar {
+    height: 0.25em;
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 1em;
+}
+
+@media (max-width:50em) {
+    .toggle-btn {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links > ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links li > a {
+        padding: .5rem 1rem;
+    } 
+
+    .navbar-links.active {  /*if it has both the classes*/
+        display: flex;
+    }
+}
