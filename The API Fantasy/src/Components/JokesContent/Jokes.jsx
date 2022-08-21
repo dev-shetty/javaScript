@@ -14,6 +14,7 @@ function Jokes() {
     fetch(url)
       .then((response) => response.json())
       .then((jokes) => {
+        console.log(jokes);
         let { delivery, setup } = jokes;
 
         if (delivery == null) {
@@ -26,7 +27,7 @@ function Jokes() {
           getJokes();
         }
       })
-      .then((error) => console.log(error));
+      .catch((error) => console.error(error));
   }
 
   function randomJokes() {
@@ -42,10 +43,13 @@ function Jokes() {
   }, []);
 
   return (
-    <main id="jokes">
-      <div className="joke">
-        <h1 ref={jokeSetup} className="joke-setup"></h1>
-        <h1 ref={jokeDelivery} className="joke-delivery"></h1>
+    <main id="main-parent">
+      <div className="main-content">
+        <header>
+          <h1>Joke:</h1>
+        </header>
+        <h2 ref={jokeSetup} className="joke-setup"></h2>
+        <h2 ref={jokeDelivery} className="joke-delivery"></h2>
       </div>
       <button id="random" onClick={randomJokes}>
         Random

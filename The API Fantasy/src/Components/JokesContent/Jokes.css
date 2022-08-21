@@ -1,4 +1,9 @@
-.joke {
+.main-content > header {
+    margin-bottom: 5%;
+    color: var(--pop-color);
+}
+
+.main-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +20,7 @@
 .joke-setup::before {
     content: "🃏";
 }
-main#jokes {
+main#main-parent {
     display: flex;
     flex-direction: column;
     justify-content: center;

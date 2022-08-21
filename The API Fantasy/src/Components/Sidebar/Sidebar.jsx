@@ -11,10 +11,10 @@ function Sidebar() {
           <Link to="/jokes">Jokes</Link>
         </li>
         <li>
-          <a href="#">API 2</a>
+          <Link to="/funfacts">Fun Facts</Link>
         </li>
         <li>
-          <a href="#">API 3</a>
+          <Link to="/isro">ISRO</Link>
         </li>
         <li>
           <a href="#">API 4</a>

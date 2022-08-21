@@ -1,7 +1,6 @@
 main#content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
 }
 main > h1 { 
     color: var(--text-color);
