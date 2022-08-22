@@ -17,7 +17,7 @@ function Sidebar() {
           <Link to="/isro">ISRO</Link>
         </li>
         <li>
-          <a href="#">API 4</a>
+          <Link to="/dictionary">Dictionary</Link>
         </li>
         <li>
           <a href="#">API 5</a>
