@@ -38,3 +38,65 @@ main#isro-main > .isro-content{
 .space-craft-name:nth-child(odd) {
     outline: 1px solid var(--pop-color);
 }
+.centres {
+    grid-column: 1 / 3;
+}
+.centres > h1 {
+    text-align: center;
+    font-size: 3em;
+}
+.centre-container {
+    outline: 2px solid;
+    padding: 2%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+.centres-parent {
+    margin: 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.centre-container > h2 {
+    color: var(--pop-color);
+    grid-column: 1 / 3;
+    text-align: center;
+}
+.centre-container > p:first-of-type {
+    justify-self: flex-end;
+    margin-right: 5%;
+}
+.centre-container > p:first-of-type::after {
+    content: ",";
+}
+.centre-container > p:nth-of-type(2) {
+    justify-self: flex-start;
+}
+
+.launchers {
+    grid-column: 1 / 3;
+}
+.launchers > h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 2%;
+}
+
+.launchers-parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+}
+.launcher-name {
+    border: 2px solid var(--pop-color);
+    text-align: center;
+    padding: 2%;
+}
+#isro-nav > ul > li:last-child {
+    margin-left: auto;
+    margin-right: 2%;
+    background-color: var(--text-color);
+}
+#isro-nav > ul > li:last-child:hover > a {
+    color: var(--pop-color)
+}

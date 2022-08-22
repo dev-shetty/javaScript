@@ -6,14 +6,17 @@ function ISROnavbar() {
     <nav id="isro-nav">
       <ul>
         <li>
-          <Link to="/centres">Centres</Link>
+          <Link to="/isro/centres">Centres</Link>
         </li>
         <li>
-          <a href="#">Launchers</a>
+          <Link to="/isro/launchers">Launchers</Link>
         </li>
         <li>
-          <Link to="isro/spacecrafts">Spacecrafts</Link>
-          {/* It showed no routes matched then just removed "/" from /isro/spacecrafts */}
+          <Link to="/isro/spacecrafts">Spacecrafts</Link>
+          {/* Add / on both main navbar link and child nav link to have them linked them */}
+        </li>
+        <li>
+          <Link to="/">Home</Link>
         </li>
       </ul>
     </nav>

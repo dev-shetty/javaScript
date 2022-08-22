@@ -1,6 +1,5 @@
 import React from "react";
 import { useRef } from "react";
-import { useEffect } from "react";
 import ISROnavbar from "../ISROnavbar/ISROnavbar";
 import "../ISRO.css";
 
