@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-color: lightseagreen;
+    --accent-color: blanchedalmond;
+    --text-color: #FFF;
+    --text-accent-color: #131313;
+    --delete-color: red;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+header {
+    position: absolute;
+    top: 2%;
+}
+header > h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-block: 2%;
+}
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    margin-top: 10%;
+    align-items: center;
+}
+#list-input {
+    padding: 2% 5%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--accent-color);
+    color: var(--text-accent-color);
+    min-width: 60%;
+    font-size: 1.5em;
+    box-shadow: 5px 5px 5px gray;  
+}
+input[type=text] {
+    font-size: 1em;
+}
+#add-item {
+    all:unset;
+    display: block;
+    padding: 1.5% 2%;
+    margin-left: 2%;
+    background-color: var(--bg-color);
+    border-radius: 15%;
+    box-shadow: 2px 2px 2px gray;
+}
+#todo-list-content {
+    background-color: var(--accent-color);
+    min-width: 60%;
+    margin-top: 1%;
+    box-shadow: 5px 5px 5px gray;  ;
+    color: var(--text-accent-color);
+}
+.individual-todo {
+    display: grid;
+    grid-template-columns: 1fr 10%;
+    padding: 2% 1%;
+    font-size: 1.5em;
+    align-items: center;
+    min-height: 5vh;
+}
+#remove-item {
+    all:unset;
+    background-color: var(--delete-color);
+    padding: 10% 15%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20%;
+    justify-self: center;
+    box-shadow: 2px 2px 2px gray;
+}
+.fa-trash-can, .fa-plus {
+    color: var(--text-color);
+}
+
+#add-item:hover .fa-plus,
+#remove-item:hover .fa-trash-can {
+    color: var(--text-accent-color)
+}
