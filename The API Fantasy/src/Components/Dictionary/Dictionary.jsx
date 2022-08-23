@@ -5,10 +5,15 @@ import "./Dictionary.css";
 function Dictionary() {
   const dictionaryResults = useRef(null);
   const searchQuery = useRef(null);
-  let searchContent = "";
+  const phoneticsRef = useRef(null);
+  const partsOfSpeech = useRef(null);
+  const definition = useRef(null);
+  const errorMessage = useRef(null);
+
+  let searchContent;
   function getSearchQuery() {
     searchContent = searchQuery.current.value;
-    getDictionaryResult(searchContent);
+    getDictionaryResult();
 
     // TODO: Show error when nothing inside the textbox
   }
@@ -16,39 +21,18 @@ function Dictionary() {
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchContent}`)
       .then((response) => response.json())
       .then((dictionaryData) => {
-        console.log(dictionaryData);
-
-        const phonetics = dictionaryData[0].phonetics.forEach((item) => {
-          item.text;
-        });
-        console.log(phonetics);
-
-        // TODO:Make them innerText / textContent rather than appending it has a bug
-        // defining the items
-        const searchQueryH3 = document.createElement("h3");
-        const phoneticsH4 = document.createElement("h4");
-        const partsOfSpeechP = document.createElement("p");
-        const definitionP = document.createElement("p");
-
-        // assigning classnames
-        searchQueryH3.classList.add("search-query");
-        phoneticsH4.classList.add("phonetics");
-        partsOfSpeechP.classList.add("parts-of-speech");
-        definitionP.classList.add("definition");
-
-        // assigning values to the elements
-        searchQueryH3.textContent = "Search Query: "; //change
-        phoneticsH4.textContent = "Phonetics: ";
-        partsOfSpeechP.textContent = "Parts of Speech: ";
-        definitionP.textContent = "Definition: ";
-
-        // appending them to dom
-        dictionaryResults.current.append(
-          searchQueryH3,
-          phoneticsH4,
-          partsOfSpeechP,
-          definitionP
-        );
+        if (dictionaryData.title == "No Definitions Found") {
+          dictionaryResults.current.style.opacity = "0";
+          errorMessage.current.style.display = "block";
+          return 0;
+        }
+        dictionaryResults.current.style.opacity = "1";
+        errorMessage.current.style.display = "none";
+        phoneticsRef.current.textContent = dictionaryData[0].phonetics[1].text;
+        partsOfSpeech.current.textContent =
+          dictionaryData[0].meanings[0].partOfSpeech;
+        definition.current.textContent =
+          dictionaryData[0].meanings[0].definitions[0].definition;
       })
       .catch((error) => console.error(error));
   }
@@ -68,11 +52,23 @@ function Dictionary() {
           <input type="submit" value="Search" onClick={getSearchQuery} />
 
           {/* Will come using js even the elements */}
+          <h1
+            className="error"
+            style={{
+              color: "red",
+              fontSize: "3.5em",
+              textAlign: "center",
+              marginBlock: "10%",
+              display: "none",
+            }}
+            ref={errorMessage}
+          >
+            No Definitions Found
+          </h1>
           <div className="result" ref={dictionaryResults}>
-            {/* <h3 className="search-query">Search Query</h3> */}
-            {/* <h4 className="phonetics">/phonetic-IPA/</h4> */}
-            {/* <p className="parts-of-speech">Parts of Speech</p> */}
-            {/* <p className="defintion">Definition</p> */}
+            <h4 className="phonetics" ref={phoneticsRef}></h4>
+            <p className="parts-of-speech" ref={partsOfSpeech}></p>
+            <p className="definition" ref={definition}></p>
           </div>
         </main>
       </div>
