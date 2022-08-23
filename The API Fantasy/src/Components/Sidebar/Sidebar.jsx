@@ -20,7 +20,7 @@ function Sidebar() {
           <Link to="/dictionary">Dictionary</Link>
         </li>
         <li>
-          <a href="#">API 5</a>
+          <Link to="/pincode">Pincode</Link>
         </li>
         <li>
           <a href="#">API 6</a>
