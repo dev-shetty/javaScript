@@ -28,3 +28,7 @@ aside > ul > li:hover > a {
     border-radius: 100%;
     margin-left: 2%;
 }
+.logo > img {
+    width: 100%;
+    transform: scale(1.2);
+}

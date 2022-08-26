@@ -1,8 +1,13 @@
-main#content {
-    display: grid;
-    place-items: center;
-}
-main > h1 { 
+main#content > h1 { 
     color: var(--text-color);
     font-size: 5em;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+main#content > p {
+    font-size: 2em;
+    width: 75%;
+    text-align: justify;
+    margin-inline: auto;
 }

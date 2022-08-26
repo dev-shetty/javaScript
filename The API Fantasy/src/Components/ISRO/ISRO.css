@@ -1,6 +1,5 @@
 #isro-nav {
-    background-color: var(--pop-color);
-    margin-block: 1%;
+    background-color: var(--navbar-color);
     width: 100%;
 }
 #isro-nav > ul > li > a {

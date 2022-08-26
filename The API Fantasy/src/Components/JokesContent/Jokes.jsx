@@ -26,7 +26,11 @@ function Jokes() {
           getJokes();
         }
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        funFactEle.current.textContent = `Some Issues with the API continue with others by then.
+          Sorry for Inconvinence.`;
+      });
   }
 
   function randomJokes() {

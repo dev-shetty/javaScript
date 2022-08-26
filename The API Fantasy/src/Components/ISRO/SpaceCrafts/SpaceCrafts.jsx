@@ -24,7 +24,11 @@ function SpaceCrafts() {
           individualSpaceCraft.current.append(h3);
         });
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        funFactEle.current.textContent = `Some Issues with the API continue with others by then.
+          Sorry for Inconvinence.`;
+      });
   }
   getISROData();
   return (

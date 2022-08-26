@@ -14,10 +14,7 @@ function Pincode() {
     fetch(`https://api.postalpincode.in/postoffice/${city}`)
       .then((response) => response.json())
       .then((cityData) => {
-        console.log(cityData);
         cityData[0].PostOffice.forEach((city) => {
-          console.log(city);
-
           cityNameH2 = document.createElement("h2");
           cityPincodeH2 = document.createElement("h2");
           cityDiv = document.createElement("div");
@@ -30,7 +27,11 @@ function Pincode() {
           result.current.append(cityDiv);
         });
       })
-      .catch((err) => console.error(err));
+      .catch((error) => {
+        console.error(error);
+        funFactEle.current.textContent = `Some Issues with the API continue with others by then.
+          Sorry for Inconvinence.`;
+      });
   }
 
   function resetSearchResults() {

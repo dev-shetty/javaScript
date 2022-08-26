@@ -34,7 +34,11 @@ function Dictionary() {
         definition.current.textContent =
           dictionaryData[0].meanings[0].definitions[0].definition;
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        funFactEle.current.textContent = `Some Issues with the API continue with others by then.
+          Sorry for Inconvinence.`;
+      });
   }
   return (
     <div>
