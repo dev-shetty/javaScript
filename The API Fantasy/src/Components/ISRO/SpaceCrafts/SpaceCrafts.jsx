@@ -26,7 +26,7 @@ function SpaceCrafts() {
       })
       .catch((error) => {
         console.error(error);
-        funFactEle.current.textContent = `Some Issues with the API continue with others by then.
+        individualSpaceCraft.current.textContent = `Some Issues with the API continue with others by then.
           Sorry for Inconvinence.`;
       });
   }

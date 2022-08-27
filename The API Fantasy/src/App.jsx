@@ -2,13 +2,14 @@ import Homepage from "./Main Components/Homepage";
 import "./App.css";
 import JokePage from "./Main Components/JokePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import FunFactPage from "./Main Components/FunFactPage";
 import ISROpage from "./Main Components/ISROpage";
 import SpaceCrafts from "./Components/ISRO/SpaceCrafts/SpaceCrafts";
+import QuotePage from "./Main Components/QuotePage";
 import Centres from "./Components/ISRO/Centres/Centres";
 import Launchers from "./Components/ISRO/Launchers/Launchers";
 import DictionaryPage from "./Main Components/DictionaryPage";
 import PincodePage from "./Main Components/PincodePage";
+import AnimalPage from "./Main Components/AnimalPage";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/jokes" element={<JokePage />} />
-          <Route path="/funfacts" element={<FunFactPage />} />
+          <Route path="/quotes" element={<QuotePage />} />
           <Route path="/isro">
             <Route index element={<ISROpage />} />
             <Route path="/isro/spacecrafts" element={<SpaceCrafts />} />
@@ -26,6 +27,7 @@ function App() {
           </Route>
           <Route path="/dictionary" element={<DictionaryPage />} />
           <Route path="/pincode" element={<PincodePage />} />
+          <Route path="/animals" element={<AnimalPage />} />
         </Routes>
       </Router>
     </>

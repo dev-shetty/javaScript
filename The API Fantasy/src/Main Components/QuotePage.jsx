@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "../Components/Sidebar/Sidebar";
 import Navbar from "../Components/Navbar/Navbar";
-import FunFacts from "../Components/FunFacts/FunFacts";
+import Quotes from "../Components/Quotes/Quotes";
 
 function FunFactPage() {
   document.title = "API Fantasy - Fun Fact";
@@ -9,7 +9,7 @@ function FunFactPage() {
     <>
       <Navbar />
       <Sidebar />
-      <FunFacts />
+      <Quotes />
     </>
   );
 }

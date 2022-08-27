@@ -25,7 +25,7 @@ function Launchers() {
       })
       .catch((error) => {
         console.error(error);
-        funFactEle.current.textContent = `Some Issues with the API continue with others by then.
+        individualLauncher.current.textContent = `Some Issues with the API continue with others by then.
           Sorry for Inconvinence.`;
       });
   }

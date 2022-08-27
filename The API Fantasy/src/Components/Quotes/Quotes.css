@@ -1,0 +1,10 @@
+.quote {
+    text-align: justify;
+    font-size: 1.5em;   
+}
+.author {
+    margin: 2%;
+} 
+.author::before {
+    content: "~ "
+}

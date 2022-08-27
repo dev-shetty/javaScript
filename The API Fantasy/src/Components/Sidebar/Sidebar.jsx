@@ -11,7 +11,7 @@ function Sidebar() {
           <Link to="/jokes">Jokes</Link>
         </li>
         <li>
-          <Link to="/funfacts">Fun Facts</Link>
+          <Link to="/quotes">Quotes</Link>
         </li>
         <li>
           <Link to="/isro">ISRO</Link>
@@ -23,7 +23,7 @@ function Sidebar() {
           <Link to="/pincode">Pincode</Link>
         </li>
         <li>
-          <a href="#">API 6</a>
+          <Link to="/animals">Animals</Link>
         </li>
       </ul>
     </aside>

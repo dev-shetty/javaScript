@@ -29,7 +29,7 @@ function Pincode() {
       })
       .catch((error) => {
         console.error(error);
-        funFactEle.current.textContent = `Some Issues with the API continue with others by then.
+        result.current.textContent = `Some Issues with the API continue with others by then.
           Sorry for Inconvinence.`;
       });
   }
