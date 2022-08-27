@@ -22,9 +22,6 @@ function Sidebar() {
         <li>
           <Link to="/pincode">Pincode</Link>
         </li>
-        <li>
-          <Link to="/animals">Animals</Link>
-        </li>
       </ul>
     </aside>
   );

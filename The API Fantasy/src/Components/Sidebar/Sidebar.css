@@ -1,7 +1,7 @@
 aside {
     padding-top: 2%;
     background-color: var(--navbar-color);
-    min-height: 92vh;
+    min-height: max(92vh, 100%);
     font-size: 1.25em;
 }
 aside > ul > li:first-child {
@@ -13,6 +13,8 @@ aside > ul {
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: sticky;
+    top: 2%;
 }
 aside > ul > li {
     padding: 1rem;

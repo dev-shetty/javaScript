@@ -1,16 +1,16 @@
 import React from "react";
+import About from "../Components/About/About";
 import Navbar from "../Components/Navbar/Navbar";
 import Sidebar from "../Components/Sidebar/Sidebar";
-import Animals from "../Components/Animals/Animals";
 
-function AnimalPage() {
+function AboutPage() {
   return (
     <>
       <Navbar />
       <Sidebar />
-      <Animals />
+      <About />
     </>
   );
 }
 
-export default AnimalPage;
+export default AboutPage;
