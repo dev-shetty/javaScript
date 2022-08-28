@@ -1,0 +1,30 @@
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    flex-direction: column;
+}
+#contact > div {
+    display: flex;
+    margin-block: 1%;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+#contact > div > p {
+    font-size: 1.25em;
+}
+#contact > div > a > .socials {
+    color: var(--text-color);
+}
+#contact > div > a:hover > .socials {
+    color: var(--pop-color);
+}
+
+@media (max-width: 50em) {
+#contact {
+    width: 100%;
+}
+}

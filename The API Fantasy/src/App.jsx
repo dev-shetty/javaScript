@@ -10,6 +10,7 @@ import Launchers from "./Components/ISRO/Launchers/Launchers";
 import DictionaryPage from "./Main Components/DictionaryPage";
 import PincodePage from "./Main Components/PincodePage";
 import AboutPage from "./Main Components/AboutPage";
+import ContactPage from "./Main Components/ContactPage";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/dictionary" element={<DictionaryPage />} />
           <Route path="/pincode" element={<PincodePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Router>
     </>

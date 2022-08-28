@@ -1,7 +1,8 @@
 aside {
     padding-top: 2%;
     background-color: var(--navbar-color);
-    min-height: max(92vh, 100%);
+    /* min-height: min(92vh, 100%); */
+    min-height: 92vh;
     font-size: 1.25em;
 }
 aside > ul > li:first-child {
@@ -24,3 +25,17 @@ aside > ul > li {
 aside > ul > li > a {
     color: var(--text-color);
 }   
+
+@media (max-width: 50em) {
+    aside {
+        min-height: 5vh;
+        margin-bottom: 2%;
+        font-size: 1em;
+    }
+    aside > ul {
+        flex-direction: row;
+    }
+    aside > ul > li:first-child {
+        display: none;
+    }
+}

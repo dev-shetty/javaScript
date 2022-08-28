@@ -5,7 +5,7 @@ nav {
 }
 nav > ul {
     display: flex;
-    gap: 2rem
+    gap: 2rem;
 }
 nav > ul > li {
     font-size: 1.25em;
@@ -31,4 +31,10 @@ aside > ul > li:hover > a {
 .logo > img {
     width: 100%;
     transform: scale(1.2);
+}
+
+@media (max-width: 50em) {
+    nav > ul > li {
+        font-size: 1em;
+    }
 }

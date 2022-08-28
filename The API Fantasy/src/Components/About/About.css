@@ -1,6 +1,3 @@
-#about {
-    margin-bottom: 5%;
-}
 #about > h1 {
     text-align: center;
     margin-block: 1%;
@@ -10,7 +7,7 @@
     width: 75%;
     margin: auto;
     display: flex;
-    gap: 2%;
+    /* gap: 2%; */  /* Causing the sidebar not grow */
     flex-wrap: wrap;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -20,10 +17,11 @@
     display: flex;
     flex-direction: column;
     padding: 2%;
-    margin-top: 2%;
+    margin: 2%;   
 }
 .api-reference > p {
     margin-bottom: 1%;
+    font-size: 1.5em;
 }
 .api-reference > h2, 
 .api-reference > h3 {
@@ -41,6 +39,7 @@
     padding: 1%;
     text-align: center;
     margin: 1%;
+    font-size: 1.125em;
 }
 .api-reference span {
     color: var(--pop-color)
@@ -53,4 +52,14 @@
 }
 .api-reference ul {
     margin-bottom: 1%;
+}
+
+@media (max-width: 50em) {
+    #about > main {
+        display: flex;
+        width: 100%;
+    }
+    .api-reference {
+        width: 100%;
+    }
 }
