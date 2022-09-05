@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.container {
+    padding: 1em;
+    width: 50%;
+}
+section {
+    border: 2px solid black;
+    text-align: center;
+    padding: 2%;
+}
+.heading > p {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-block: 1%;
+    width: 90%;
+    text-align: justify;
+}
+.heading {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.heading > i {
+    position: absolute;
+    right: 0;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+}
+.active {
+    max-height: 5000px;  
+    /* Some absolute value which is the max of container */
+}
