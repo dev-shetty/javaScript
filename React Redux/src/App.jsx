@@ -1,16 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import TodoPage from "./pages/TodoPage";
 import "./App.css";
-import Login from "./components/Login";
-import Profile from "./components/Profile";
-import Counter from "./components/Counter";
 
 function App() {
   return (
-    <div className="App">
-      <Profile />
-      <Login />
-      <Counter />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/todo" element={<TodoPage />} />
+      </Routes>
+    </Router>
   );
 }
 

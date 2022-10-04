@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { login } from "../features/user";
 
 function Login() {
@@ -19,6 +20,9 @@ function Login() {
       >
         Click to reveal details
       </button>
+      <li>
+        <Link to="/todo">Todo </Link>
+      </li>
     </div>
   );
 }

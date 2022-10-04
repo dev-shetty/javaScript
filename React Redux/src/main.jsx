@@ -8,11 +8,13 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import userReducer from "./features/user";
 import counterReducer from "./features/counter";
+import todoReducer from "./features/todo";
 
 const store = configureStore({
   reducer: {
     user: userReducer,
     counter: counterReducer,
+    todo: todoReducer,
   },
 });
 
