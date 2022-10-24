@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    overflow: hidden;
+}
+body {
+    min-height: 100vh;
+    padding-bottom: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient( lightblue 35%, blue);
+}
+
+.wish {
+    background: linear-gradient(to right, red, orange);
+    font-size: clamp(1rem, 3rem + 3vw, 5rem);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: drop-shadow(5px 2px black);
+}
+.container {
+    width: 500px;
+    aspect-ratio: 1;
+    position: relative;
+}
+.lamp {
+    position: absolute;
+    bottom: 0;
+    width: 500px;
+    height: 150px;
+    background-color: brown;
+    border-radius: 0 0 100vw 100vw;
+}
+.lamp::before, 
+.lamp::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+}   
+.lamp::after {
+    border-radius: 0 0 100vw 100vw;
+    width: inherit;
+    height: 200px;
+    background-color: brown;
+    box-shadow: inset 200px -200px darkred,
+                 0 2em 3em black;
+}
+.lamp::before {
+    background-color: red;
+    width: inherit;
+    height: 20px;
+    top: -20px;
+}
+.edges {
+    width: 250px;
+    height: 120px;
+    position: absolute;
+    background-color: black;
+    bottom: 50px;
+    border-radius: 0 0 100vw 100vw;
+}
+.edges:nth-of-type(2) {
+    background-color: black;
+    right: 0;
+}
+.back-edge {
+    position: absolute;
+    width: inherit;
+    height: 50px;
+    bottom: 160px;
+    border-radius: 100vw 100vw 0 0;
+}
+.back-edge::after {
+    content: "";
+    background-color: lightblue;
+    border: none;
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    top: 40px;
+    border-radius: 0 0 100vw 100vw;
+}
+.fire {
+    position: absolute;
+    width: 150px;
+    bottom: 150px;
+    height: 200px;
+    background-color: red;
+    border-radius: 100vw 0 ;
+    left:47%;
+    rotate: -35deg;
+    animation: flow 2s infinite ease-in-out;
+    transform: translateX(-50%);
+}
+.fire::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    background-color: orange;
+    height: 100px;
+    border-radius: inherit;
+    bottom: 10px;
+    rotate: -25deg;
+    right: 25px;
+}
+.stick {
+    position: absolute;
+    background: linear-gradient(orange, brown);
+    height: 75px;
+    width: 10px;
+    bottom: 65px;
+    border-radius: 100vw;
+    left: 50%;
+    transform: translateX(-30%);
+}
+.crackers {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: green;
+    border-radius: 50%;
+    width: 25px;
+    aspect-ratio: 1;
+}
+
+@keyframes flow {
+    50% {
+        transform: translateX(-50%) rotate(3deg);
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    body {
+        background: linear-gradient(to top, lightblue 40%, blue);
+    }
+}
