@@ -1,0 +1,32 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightseagreen;
+}
+
+#Ellipse1,
+#Ellipse2,
+#Ellipse3 {
+  transition: all 1s ease;
+}
+
+#Ellipse3 {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+#load {
+  cursor: pointer;
+}
+
+#load:hover #Ellipse1 {
+  opacity: 0;
+  transform: translate(-100%);
+}
+
+#load:hover #Ellipse3 {
+  opacity: 1;
+  transform: translate(-20%);
+}

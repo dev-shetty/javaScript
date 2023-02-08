@@ -1,0 +1,9 @@
+<svg width="120" height="90" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="load">
+<g id="circles">
+<path id="Ellipse 3" d="M113.5 45.5C113.5 57.9264 103.426 68 91 68C78.5736 68 68.5 57.9264 68.5 45.5C68.5 33.0736 78.5736 23 91 23C103.426 23 113.5 33.0736 113.5 45.5Z" fill="#FFFF00" fill-opacity="0.5"/>
+<path id="Ellipse 2" d="M64 44.5C64 56.9264 53.9264 67 41.5 67C29.0736 67 19 56.9264 19 44.5C19 32.0736 29.0736 22 41.5 22C53.9264 22 64 32.0736 64 44.5Z" fill="#FF00FF" fill-opacity="0.5"/>
+<circle id="Ellipse 1" cx="30.5" cy="44.5" r="22.5" fill="#FFFF00" fill-opacity="0.5"/>
+</g>
+</g>
+</svg>
