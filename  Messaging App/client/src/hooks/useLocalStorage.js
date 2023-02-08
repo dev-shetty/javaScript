@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 // So that local storage not conflict and easy to find
-const PREFIX = "messaging-app"
+const PREFIX = "messaging-app-"
 
 function useLocalStorage(key, initialValue) {
   const prefixedKey = PREFIX + key
