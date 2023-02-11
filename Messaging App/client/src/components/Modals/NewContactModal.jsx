@@ -20,10 +20,14 @@ function NewContactModal({ closeModal }) {
           <Form.Group>
             <Form.Label>ID</Form.Label>
             <Form.Control type="text" ref={idRef} required></Form.Control>
+          </Form.Group>
+          <Form.Group>
             <Form.Label>Name</Form.Label>
             <Form.Control type="text" ref={nameRef} required></Form.Control>
           </Form.Group>
-          <Button type="submit">Create</Button>
+          <Button type="submit" className="mt-2">
+            Create
+          </Button>
         </Form>
       </Modal.Body>
     </>
