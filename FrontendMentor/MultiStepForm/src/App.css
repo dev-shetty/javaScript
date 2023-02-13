@@ -34,3 +34,13 @@
   --Alabaster: hsl(231, 100%, 99%);
   --White: hsl(0, 0%, 100%);
 }
+
+html,
+body,
+#root {
+  @apply h-full;
+}
+
+/* * {
+  outline: 1px solid royalblue;
+} */

@@ -23,11 +23,11 @@ module.exports = {
         "accent-400": "hsl(354, 84%, 57%)",
 
         // Neutral Colors
-        "neutral-700": "hsl(231, 11%, 63%)",
-        "neutral-400": "hsl(229, 24%, 87%)",
-        "neutral-300": "hsl(217, 100%, 97%)",
-        "neutral-200": "hsl(231, 100%, 99%)",
-        "neutral-100": "hsl(0, 0%, 100%)",
+        "secondary-700": "hsl(231, 11%, 63%)",
+        "secondary-400": "hsl(229, 24%, 87%)",
+        "secondary-300": "hsl(217, 100%, 97%)",
+        "secondary-200": "hsl(231, 100%, 99%)",
+        "secondary-100": "hsl(0, 0%, 100%)",
       },
       fontSize: {
         md: "16px",
