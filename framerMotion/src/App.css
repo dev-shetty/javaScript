@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+  transition: all 350ms ease-in-out;
+} */
+
+.box {
+  @apply w-32 aspect-square bg-blue-500;
+}
+
+.progress-bar {
+  transform-origin: 0%;
+}
