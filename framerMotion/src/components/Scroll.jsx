@@ -7,6 +7,11 @@ function orange(saturation) {
 }
 
 function Scroll() {
+  const variants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  }
+
   const x = useMotionValue(0)
   const x2 = useMotionValue(0)
 
@@ -65,6 +70,15 @@ function Scroll() {
           dragElastic={1}
           dragConstraints={{ left: -200, right: 200 }}
           style={{ scale, backgroundColor, x: x2 }}
+        ></motion.div>
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="show"
+          className="box"
+          viewport={{ margin: "-100px" }}
+          // {once: true} Says that the animation only happens in first scroll
+          // {margin: "-100px"} that the animation will occur after 100px is scrolled in viewport (default: 0)
         ></motion.div>
       </div>
     </div>
