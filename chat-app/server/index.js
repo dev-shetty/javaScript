@@ -3,8 +3,10 @@ import express from "express"
 import logger from "morgan"
 import dotenv from "dotenv"
 import cors from "cors"
+import socketio from "socket.io"
 
 import "./config/mongo.js"
+import WebSockets from "./utils/WebSockets.js"
 import indexRouter from "./routes/index.js"
 import userRouter from "./routes/user.js"
 import chatRoomRouter from "./routes/chatRoom.js"
@@ -23,18 +25,20 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use("/", indexRouter)
 app.use("/users", userRouter)
-app.use("/room", chatRoomRouter)
+app.use("/room", decode, chatRoomRouter)
 app.use("/delete", deleteRouter)
 
 // for 404 (route not found)
 app.use("*", (req, res) => {
   res.status(404).json({
     success: false,
-    message: "You lost your way...endpoint doesn't exisit",
+    message: "You lost your way...endpoint doesn't exist",
   })
 })
 
 const server = http.createServer(app)
+global.io = socketio.listen(server)
+global.io.on("connection", WebSockets.connection)
 server.listen(port)
 server.on("listening", () => {
   console.log(`Listening on port :: http://localhost:${port}`)
