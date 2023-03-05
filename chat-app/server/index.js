@@ -3,7 +3,7 @@ import express from "express"
 import logger from "morgan"
 import dotenv from "dotenv"
 import cors from "cors"
-import socketio from "socket.io"
+import { Server } from "socket.io"
 
 import "./config/mongo.js"
 import WebSockets from "./utils/WebSockets.js"
@@ -37,7 +37,7 @@ app.use("*", (req, res) => {
 })
 
 const server = http.createServer(app)
-global.io = socketio.listen(server)
+global.io = new Server(server)
 global.io.on("connection", WebSockets.connection)
 server.listen(port)
 server.on("listening", () => {
