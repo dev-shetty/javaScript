@@ -2,6 +2,7 @@ import DispaySection from "./components/DisplaySection"
 import Jumbotron from "./components/Jumbotron"
 import Nav from "./components/Nav"
 import SoundSection from "./components/SoundSection"
+import WebgiViewer from "./components/WebgiViewer"
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <Nav />
       <Jumbotron />
       <SoundSection />
-      <DispaySection /> 
+      <DispaySection />
+      <WebgiViewer />
     </div>
   )
 }
